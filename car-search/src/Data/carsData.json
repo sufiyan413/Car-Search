@@ -1,0 +1,70 @@
+[
+    {
+      "imageUrl": "https://wallpapers.com/images/featured/jaguar-car-0h4vhh2g85m0elx1.jpg",
+      "imageAlt": "car1",
+      "title": "Jaguar",
+      "model": "2022",
+      "seats": "4",
+      "fuelType": "Hybrid",
+      "mileage": "8.2km/1-litre",
+      "gears": "Automatic",
+      "amount":"500"
+    },
+    {
+      "imageUrl": "https://static.autox.com/uploads/2022/07/Maruti-Brezza-Front-Three-Fourth-Action.jpg",
+      "imageAlt": "Brezza",
+      "title": "Brezza",
+      "model": "2023",
+      "seats": "4",
+      "fuelType": "Electric",
+      "mileage": "7.5km/1-litre",
+      "gears": "Manual",
+      "amount":"200"
+    },
+    {
+        "imageUrl": "https://imgd-ct.aeplcdn.com/1200x900/n/cw/ec/140833/innova-crysta-right-front-three-quarter.png?isig=0&q=80",
+        "imageAlt": "Innova",
+        "title": "Toyota Innova",
+        "model": "2020",
+        "seats": "5",
+        "fuelType": "Gasoline",
+        "mileage": "7.5km/1-litre",
+        "gears": "Manual",
+        "amount":"450"
+      },
+    {
+        "imageUrl": "https://imgd.aeplcdn.com/0x0/n/9dfrg3a_1573867.jpg?q=80",
+        "imageAlt": "XL6",
+        "title": "Maruti XL6",
+        "model": "2018",
+        "seats": "4",
+        "fuelType": "Gasoline",
+        "mileage": "7.5km/1-litre",
+        "gears": "Manual",
+        "amount":"400"
+      },
+    {
+        "imageUrl": "https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20180123124138_Swift_BLUE.jpg&w=700&q=90&c=1",
+        "imageAlt": "swift",
+        "title": "Swift",
+        "model": "2017",
+        "seats": "5",
+        "fuelType": "Gasoline",
+        "mileage": "7.5km/1-litre",
+        "gears": "Manual",
+        "amount":"350"
+
+      },
+    {
+        "imageUrl": "https://media.zigcdn.com/media/model/2023/Feb/dzire_360x240.jpg",
+        "imageAlt": "Swift",
+        "title": "Swift Dzire",
+        "model": "2020",
+        "seats": "4",
+        "fuelType": "Petrol",
+        "mileage": "7.5km/1-litre",
+        "gears": "Manual",
+        "amount":"300"
+      }
+  ]
+  
