@@ -1,46 +1,55 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import Routes
 import './Styles/App.css';
 import Navbar from './Components/Navbar';
-import Card from './Components/Card';
-import jsonData from './Data/carsData.json'; 
+import jsonData from './Data/carsData.json';
 import Footer from './Components/Footer';
+import CarList from './Components/CarList';
 
 function App() {
-  const [carDataState, setCarDataState] = useState([]); 
+
+  const [carDataState, setCarDataState] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     setCarDataState(jsonData);
   }, []);
 
+  const totalPages = Math.ceil(carDataState.length / 6); 
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
   return (
-    <div className="App">
-      <div className='Header'>
-      <Navbar />
-      </div>
-      <div className="card-container">
-        {carDataState.map((car, index) => (
-          <Card
-            key={index}
-            imageUrl={car.imageUrl}
-            imageAlt={car.imageAlt}
-            title={car.title}
-            model={car.model}
-            description={car.description}
-            seats={car.seats}
-            fuelType={car.fuelType}
-            mileage={car.mileage}
-            gears={car.gears}
-            amount={car.amount}
+    <Router>
+      <div className="App">
+
+        <div className='Header'>
+          <Navbar />
+        </div>
+
+        <Routes>
+          <Route path="/" element={<CarList carData={carDataState} currentPage={currentPage} />} />
+        </Routes>
+
+        <div>
+          <Footer
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onPageChange={handlePageChange}
           />
-        ))}
+        </div>
+
       </div>
-      <div>
-        <Footer  totalPages={20} currentPage={1} onPageChange={(pageNumber) => console.log('Page changed to', pageNumber)}/>
-      </div>
-    </div>
+      
+    </Router>
   );
 }
 
 export default App;
+
+
+
 
 

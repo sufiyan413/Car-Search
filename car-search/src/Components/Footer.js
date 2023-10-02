@@ -3,7 +3,9 @@ import "../Styles/Footer.css"
 
 function Footer({ totalPages, currentPage, onPageChange }) {
   const range = [];
-  const maxButtons = 5; 
+  const maxButtons = 5;
+
+
   let startPage = Math.max(currentPage - Math.floor(maxButtons / 2), 1);
   let endPage = startPage + maxButtons - 1;
 
@@ -17,16 +19,27 @@ function Footer({ totalPages, currentPage, onPageChange }) {
   }
 
   return (
+
     <div className="footer">
-      <button onClick={() => onPageChange(1)}>&lt;</button> 
+
+      <button onClick={() => onPageChange(1)}>&lt;</button>
+
       {startPage > 1 && <span>...</span>}
+
       {range.map((pageNumber) => (
+
         <button key={pageNumber} onClick={() => onPageChange(pageNumber)}>
+
           {pageNumber}
+
         </button>
       ))}
+
       {endPage < totalPages && <span>...</span>}
-      <button onClick={() => onPageChange(totalPages)}>&gt;</button> 
+
+      <button onClick={() => onPageChange(totalPages)}>&gt;</button>
+
+      
     </div>
   );
 }
